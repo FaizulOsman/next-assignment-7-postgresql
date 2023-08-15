@@ -39,3 +39,10 @@ VALUES
     ('Eve', 24, 'newemail@example.com', 45, 34, NULL),
     ('Rahim', 23, 'rahim@gmail.com', 46, 42, NULL);
 
+-- Insert into courses table
+INSERT INTO courses (course_name, credits)
+VALUES
+    ('Next.js', 3),
+    ('React.js', 4),
+    ('Databases', 3),
+    ('Prisma', 3);
