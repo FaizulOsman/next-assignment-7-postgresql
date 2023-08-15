@@ -46,3 +46,11 @@ VALUES
     ('React.js', 4),
     ('Databases', 3),
     ('Prisma', 3);
+
+-- Insert into enrollment table
+INSERT INTO enrollment (student_id, course_id)
+VALUES
+    (1, 1),
+    (1, 2),
+    (2, 1),
+    (3, 2);
