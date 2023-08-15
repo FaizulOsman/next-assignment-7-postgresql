@@ -19,3 +19,10 @@ CREATE TABLE courses (
     course_name VARCHAR(50),
     credits INTEGER
 );
+
+-- Enrollment Table Creation
+CREATE TABLE enrollment (
+    enrollment_id SERIAL PRIMARY KEY,
+    student_id INTEGER REFERENCES students(student_id),
+    course_id INTEGER REFERENCES courses(course_id)
+);
