@@ -1,3 +1,4 @@
+-- ########################## Database Creation ##########################
 CREATE DATABASE university_db;
 
 -- ########################## Table Creation ##########################
@@ -10,4 +11,11 @@ CREATE TABLE students (
     frontend_mark INTEGER,
     backend_mark INTEGER,
     status VARCHAR(20)
+);
+
+-- Courses Table Creation
+CREATE TABLE courses (
+    course_id SERIAL PRIMARY KEY,
+    course_name VARCHAR(50),
+    credits INTEGER
 );
