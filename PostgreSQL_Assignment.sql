@@ -26,3 +26,16 @@ CREATE TABLE enrollment (
     student_id INTEGER REFERENCES students(student_id),
     course_id INTEGER REFERENCES courses(course_id)
 );
+
+
+-- ########################## Data Insertion ##########################
+-- Insert into students table
+INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status)
+VALUES
+    ('Alice', 22, 'alice@example.com', 55, 57, NULL),
+    ('Bob', 21, 'bob@example.com', 34, 45, NULL),
+    ('Charlie', 23, 'charlie@example.com', 60, 59, NULL),
+    ('David', 20, 'david@example.com', 40, 49, NULL),
+    ('Eve', 24, 'newemail@example.com', 45, 34, NULL),
+    ('Rahim', 23, 'rahim@gmail.com', 46, 42, NULL);
+
