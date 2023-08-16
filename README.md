@@ -37,3 +37,14 @@ CHAR:
 ## 5. Explain the purpose of the WHERE clause in a SELECT statement.
 
 **Answer:** The WHERE clause in a SELECT statement serves to filter & retrieve specific rows from a database table based on specified conditions. It acts as a condition or criteria that limits the results to only those meeting the given criteria. This clause allows you to extract relevant data while excluding irrelevant records, enhancing data retrieval efficiency. By using various logical operators such as &, OR, & NOT, you can create complex conditions for data selection. The WHERE clause is crucial for tailoring queries to specific needs, enabling targeted analysis & reporting of data.
+
+## 6. What are the LIMIT and OFFSET clauses used for?
+
+**Answer:**
+The LIMIT & OFFSET clauses are used in SQL queries to control the number of rows returned by a SELECT statement:
+
+- LIMIT: It specifies the maximum number of rows to be retrieved from the result set.
+- OFFSET: It indicates where to start retrieving rows from the result set, skipping a certain number of initial rows.
+- Used together, they allow paginated results—retrieving a specific subset of rows for display.
+- LIMIT is often combined with ORDER BY for consistent pagination.
+- These clauses are essential for managing data presentation in chunks, reducing load times & improving user experience.
