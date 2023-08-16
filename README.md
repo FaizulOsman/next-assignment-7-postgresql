@@ -17,6 +17,7 @@ In summary, primary keys uniquely identify rows, while foreign keys create relat
 ## 4. What is the difference between the VARCHAR and CHAR data types?
 
 **Answer:**
+
 VARCHAR:
 
 - Variable-length character data type.
@@ -32,3 +33,7 @@ CHAR:
 - Automatically pads with spaces or truncates data to the specified length.
 - Compares and sorts based on the entire fixed length, including trailing spaces.
 - Useful for codes, identifiers, and when consistent lengths or padding is needed.
+
+## 5. Explain the purpose of the WHERE clause in a SELECT statement.
+
+**Answer:** The WHERE clause in a SELECT statement serves to filter & retrieve specific rows from a database table based on specified conditions. It acts as a condition or criteria that limits the results to only those meeting the given criteria. This clause allows you to extract relevant data while excluding irrelevant records, enhancing data retrieval efficiency. By using various logical operators such as &, OR, & NOT, you can create complex conditions for data selection. The WHERE clause is crucial for tailoring queries to specific needs, enabling targeted analysis & reporting of data.
