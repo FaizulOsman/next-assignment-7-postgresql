@@ -79,3 +79,43 @@ The GROUP BY clause works by first sorting the result set based on the specified
 To ensure accurate results, columns not included in the GROUP BY clause can typically only appear in the SELECT clause if they are used within an aggregation function. If you want to filter groups based on certain conditions after aggregation, you can use the HAVING clause.
 
 In summary, the GROUP BY clause is essential for performing meaningful aggregations on data subsets, aiding in the generation of valuable insights and summaries from relational databases.
+
+## 10. How can you calculate aggregate functions like COUNT, SUM, and AVG in PostgreSQL?
+
+**Answer:** In PostgreSQL, you can calculate aggregate functions like COUNT, SUM, and AVG using the SELECT statement along with the appropriate function. Here's how you can do it:
+
+- COUNT: To count the number of rows in a table or the number of non-null values in a column, use the COUNT function.
+
+```
+-- Count the number of rows in a table
+SELECT COUNT(*) FROM your_table;
+
+-- Count the number of non-null values in a column
+SELECT COUNT(column_name) FROM your_table;
+```
+
+- SUM: To calculate the sum of values in a numeric column, use the SUM function.
+
+```
+-- Calculate the sum of values in a numeric column
+SELECT SUM(numeric_column) FROM your_table;
+```
+
+- AVG: To calculate the average of values in a numeric column, use the AVG function.
+
+```
+-- Calculate the average of values in a numeric column
+SELECT AVG(numeric_column) FROM your_table;
+```
+
+Replace your_table with the actual name of your table and column_name with the name of the column you want to perform the aggregation on.
+
+Remember that aggregate functions can also be used in combination with the GROUP BY clause to perform calculations within specific groups in the data. If you want to apply filtering to the data before performing aggregation, you can use the WHERE clause.
+
+Here's an example using the GROUP BY clause to calculate the average age for each gender in a hypothetical people table:
+
+```
+SELECT gender, AVG(age) FROM people GROUP BY gender;
+```
+
+This would give you the average age for each distinct gender in the people table.
