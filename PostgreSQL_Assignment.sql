@@ -73,3 +73,7 @@ WHERE student_id IN (SELECT student_id FROM enrollment WHERE course_id = (SELECT
 UPDATE students
 SET status = 'Awarded'
 WHERE student_id = (SELECT student_id FROM (SELECT student_id, (frontend_mark + backend_mark) AS total_mark FROM students) AS subquery ORDER BY total_mark DESC LIMIT 1);
+
+-- Query 4: Delete all courses that have no students enrolled.
+DELETE FROM courses
+WHERE course_id NOT IN (SELECT DISTINCT course_id FROM enrollment);
