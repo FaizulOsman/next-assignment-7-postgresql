@@ -40,11 +40,22 @@ CHAR:
 
 ## 6. What are the LIMIT and OFFSET clauses used for?
 
-**Answer:**
-The LIMIT & OFFSET clauses are used in SQL queries to control the number of rows returned by a SELECT statement:
+**Answer:** The LIMIT & OFFSET clauses are used in SQL queries to control the number of rows returned by a SELECT statement:
 
 - LIMIT: It specifies the maximum number of rows to be retrieved from the result set.
 - OFFSET: It indicates where to start retrieving rows from the result set, skipping a certain number of initial rows.
 - Used together, they allow paginated results—retrieving a specific subset of rows for display.
 - LIMIT is often combined with ORDER BY for consistent pagination.
 - These clauses are essential for managing data presentation in chunks, reducing load times & improving user experience.
+
+## 7. How can you perform data modification using UPDATE statements?
+
+**Answer:** To perform data modification using UPDATE statements in SQL:
+
+- Use the UPDATE keyword followed by the table name you want to modify.
+- Set the column(s) you want to change using the SET keyword, specifying the new values.
+- Add a WHERE clause to specify which rows to update based on certain conditions.
+- Without a WHERE clause, all rows in the table will be updated.
+- You can update multiple columns in a single statement.
+- After executing, the affected rows will have their values modified as specified.
+- Use caution & backup data when performing updates to avoid unintended consequences.
