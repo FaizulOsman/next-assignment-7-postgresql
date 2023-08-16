@@ -61,10 +61,15 @@ VALUES
 -- Query 1: Insert a new student record:
 INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status)
 VALUES
-    ('Faizul', 28, 'faizul@example.com', 59, 60, NULL);
+    ('Faizul', 28, 'faizul@example.com', 55, 60, NULL);
 
 
 -- Query 2: Retrieve the names of all students who are enrolled in the course titled 'Next.js':
 SELECT student_name
 FROM students
 WHERE student_id IN (SELECT student_id FROM enrollment WHERE course_id = (SELECT course_id FROM courses WHERE course_name = 'Next.js'));
+
+-- Query 3: Update the status of the student with the highest total (frontend_mark + backend_mark) mark to 'Awarded'
+UPDATE students
+SET status = 'Awarded'
+WHERE student_id = (SELECT student_id FROM (SELECT student_id, (frontend_mark + backend_mark) AS total_mark FROM students) AS subquery ORDER BY total_mark DESC LIMIT 1);
