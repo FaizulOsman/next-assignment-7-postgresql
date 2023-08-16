@@ -65,15 +65,18 @@ VALUES
 
 
 -- Query 2: Retrieve the names of all students who are enrolled in the course titled 'Next.js':
-SELECT student_name
-FROM students
+SELECT student_name FROM students
 WHERE student_id IN (SELECT student_id FROM enrollment WHERE course_id = (SELECT course_id FROM courses WHERE course_name = 'Next.js'));
 
 -- Query 3: Update the status of the student with the highest total (frontend_mark + backend_mark) mark to 'Awarded'
-UPDATE students
-SET status = 'Awarded'
+UPDATE students SET status = 'Awarded'
 WHERE student_id = (SELECT student_id FROM (SELECT student_id, (frontend_mark + backend_mark) AS total_mark FROM students) AS subquery ORDER BY total_mark DESC LIMIT 1);
 
 -- Query 4: Delete all courses that have no students enrolled.
 DELETE FROM courses
 WHERE course_id NOT IN (SELECT DISTINCT course_id FROM enrollment);
+
+-- Query 5: Retrieve the names of students using a limit of 2, starting from the 3rd student.
+SELECT student_name FROM students
+ORDER BY student_id
+LIMIT 2 OFFSET 2;
