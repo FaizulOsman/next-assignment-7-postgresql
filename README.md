@@ -123,3 +123,27 @@ This would give you the average age for each distinct gender in the people table
 ## 11. What is the purpose of an index in PostgreSQL, and how does it optimize query performance?
 
 **Answer:** An index in PostgreSQL serves to enhance query performance by expediting data retrieval. It achieves this by enabling the database system to swiftly locate rows matching specific criteria. This is crucial for large tables, where direct data access is more efficient than full table scans. Indexes reduce disk I/O by pinpointing relevant data pages, enhance sorting, & expedite join operations. They also optimize aggregation functions & enforce constraints, contributing to data integrity. However, indexes have trade-offs: they occupy storage space, may impact write performance due to maintenance overhead, & necessitate careful selection to avoid suboptimal performance. In summary, indexes in PostgreSQL streamline data access, sorting, & join operations, but require strategic design for optimal performance.
+
+## 12. Explain the concept of a PostgreSQL view and how it differs from a table.
+
+**Answer:** A PostgreSQL view is a virtual table that presents data from one or more existing tables in a structured way, enabling users to query and interact with the data as if it were contained in a physical table. However, a view does not store data on its own; it's a saved query that is dynamically executed each time it's referenced.
+
+Here's how a PostgreSQL view works and how it differs from a table:
+
+**_PostgreSQL View:_**
+
+- Definition: A view is defined by a SQL query, which can involve one or more tables and might include filtering, joining, and aggregating data.
+- Data Storage: A view doesn't store its own data; it simply presents the data from the underlying tables based on the defined query.
+- Data Modification: Depending on the complexity of the view's query, some views can allow limited data modification (INSERT, UPDATE, DELETE). However, this is subject to certain restrictions and might not work for all views.
+- Security and Abstraction: Views can provide a layer of security and data abstraction by allowing users to access a controlled subset of data without exposing the entire schema.
+- Dynamic Data: The data shown in a view is not static; it reflects the current state of the underlying tables. Any changes made to the base tables are immediately reflected in the view's results.
+
+**_PostgreSQL Table:_**
+
+- Definition: A table is a physical storage structure that holds actual data. It is defined by its columns and data types, and it stores rows of data.
+- Data Storage: Tables store their own data on disk, and each row represents a distinct data entry.
+- Data Modification: Tables allow full data manipulation operations such as INSERT, UPDATE, and DELETE.
+- Direct Access: Data in tables can be accessed directly, and their structure is more rigid compared to views.
+- Persistence: Data in tables is persistent, meaning it remains unchanged until explicitly modified.
+
+In summary, a PostgreSQL view is a virtual representation of data from one or more tables, defined by a query. It doesn't store data itself but provides a dynamic way to access and interact with data from the underlying tables. A table, on the other hand, is a physical storage structure that holds actual data, supports full data manipulation operations, and is the primary means of persistently storing information in a relational database.
