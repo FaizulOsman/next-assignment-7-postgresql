@@ -119,3 +119,7 @@ SELECT gender, AVG(age) FROM people GROUP BY gender;
 ```
 
 This would give you the average age for each distinct gender in the people table.
+
+## 11. What is the purpose of an index in PostgreSQL, and how does it optimize query performance?
+
+**Answer:** An index in PostgreSQL serves to enhance query performance by expediting data retrieval. It achieves this by enabling the database system to swiftly locate rows matching specific criteria. This is crucial for large tables, where direct data access is more efficient than full table scans. Indexes reduce disk I/O by pinpointing relevant data pages, enhance sorting, & expedite join operations. They also optimize aggregation functions & enforce constraints, contributing to data integrity. However, indexes have trade-offs: they occupy storage space, may impact write performance due to maintenance overhead, & necessitate careful selection to avoid suboptimal performance. In summary, indexes in PostgreSQL streamline data access, sorting, & join operations, but require strategic design for optimal performance.
