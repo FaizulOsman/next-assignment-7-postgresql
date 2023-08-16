@@ -59,3 +59,11 @@ CHAR:
 - You can update multiple columns in a single statement.
 - After executing, the affected rows will have their values modified as specified.
 - Use caution & backup data when performing updates to avoid unintended consequences.
+
+## 8. What is the significance of the JOIN operation, and how does it work in PostgreSQL?
+
+**Answer:** The JOIN operation is crucial in relational databases like PostgreSQL as it enables combining data from multiple tables based on related columns. It's used to retrieve data that spans across tables, enhancing query capabilities.
+
+In PostgreSQL, JOIN works by specifying the columns that link the tables together using the ON keyword. It scans both tables, matches rows based on the specified conditions, and generates a new result set with combined data. Common types of JOINs include INNER JOIN (returns matching rows), LEFT JOIN (includes unmatched rows from the left table), RIGHT JOIN (includes unmatched rows from the right table), and FULL JOIN (includes all rows from both tables).
+
+JOINs facilitate complex data retrieval, including aggregations, filtering, and sorting across multiple tables. They're vital for designing efficient and normalized database structures while minimizing data redundancy. Careful usage of JOINs, along with appropriate indexes, enhances query performance and enables the retrieval of meaningful insights from related data sources.
