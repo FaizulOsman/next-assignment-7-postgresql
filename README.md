@@ -13,3 +13,23 @@
 Foreign Key (FK): A foreign key establishes a connection between tables. It links a column in one table to the primary key column in another. This maintains referential integrity, ensuring data consistency by matching values in the foreign key to existing primary key values or nulls in the referenced table.
 
 In summary, primary keys uniquely identify rows, while foreign keys create relationships between tables, enhancing data organization & integrity in PostgreSQL databases.
+
+## 4. What is the difference between the VARCHAR and CHAR data types?
+
+**Answer:**
+
+- VARCHAR:
+
+* Variable-length character data type.
+* Efficient storage for varying-length strings, using space only for actual characters.
+* Trailing spaces are automatically trimmed when storing.
+* Compares and sorts based on the actual characters, ignoring trailing spaces.
+* Suitable for names, descriptions, and text with different lengths.
+
+- CHAR:
+
+* Fixed-length character data type.
+* Reserves a fixed amount of storage for each value, even if it's shorter.
+* Automatically pads with spaces or truncates data to the specified length.
+* Compares and sorts based on the entire fixed length, including trailing spaces.
+* Useful for codes, identifiers, and when consistent lengths or padding is needed.
