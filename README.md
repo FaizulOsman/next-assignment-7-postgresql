@@ -67,3 +67,15 @@ CHAR:
 In PostgreSQL, JOIN works by specifying the columns that link the tables together using the ON keyword. It scans both tables, matches rows based on the specified conditions, and generates a new result set with combined data. Common types of JOINs include INNER JOIN (returns matching rows), LEFT JOIN (includes unmatched rows from the left table), RIGHT JOIN (includes unmatched rows from the right table), and FULL JOIN (includes all rows from both tables).
 
 JOINs facilitate complex data retrieval, including aggregations, filtering, and sorting across multiple tables. They're vital for designing efficient and normalized database structures while minimizing data redundancy. Careful usage of JOINs, along with appropriate indexes, enhances query performance and enables the retrieval of meaningful insights from related data sources.
+
+## 9. Explain the GROUP BY clause and its role in aggregation operations.
+
+**Answer:** The GROUP BY clause in SQL is used to group rows from a result set based on one or more columns. It plays a critical role in aggregation operations by allowing you to perform calculations and summaries on data subsets.
+
+When you use GROUP BY, the query divides the rows into groups based on the specified columns. Aggregation functions like SUM, COUNT, AVG, MAX, and MIN can then be applied to each group, producing aggregated results. This is especially useful for generating reports, statistics, or summaries from large datasets.
+
+The GROUP BY clause works by first sorting the result set based on the specified columns and then grouping rows with identical values in those columns. Aggregation functions are then applied separately to each group, resulting in a single output row per group.
+
+To ensure accurate results, columns not included in the GROUP BY clause can typically only appear in the SELECT clause if they are used within an aggregation function. If you want to filter groups based on certain conditions after aggregation, you can use the HAVING clause.
+
+In summary, the GROUP BY clause is essential for performing meaningful aggregations on data subsets, aiding in the generation of valuable insights and summaries from relational databases.
