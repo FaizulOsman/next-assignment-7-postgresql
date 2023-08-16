@@ -17,19 +17,18 @@ In summary, primary keys uniquely identify rows, while foreign keys create relat
 ## 4. What is the difference between the VARCHAR and CHAR data types?
 
 **Answer:**
+VARCHAR:
 
-- VARCHAR:
+- Variable-length character data type.
+- Efficient storage for varying-length strings, using space only for actual characters.
+- Trailing spaces are automatically trimmed when storing.
+- Compares and sorts based on the actual characters, ignoring trailing spaces.
+- Suitable for names, descriptions, and text with different lengths.
 
-* Variable-length character data type.
-* Efficient storage for varying-length strings, using space only for actual characters.
-* Trailing spaces are automatically trimmed when storing.
-* Compares and sorts based on the actual characters, ignoring trailing spaces.
-* Suitable for names, descriptions, and text with different lengths.
+CHAR:
 
-- CHAR:
-
-* Fixed-length character data type.
-* Reserves a fixed amount of storage for each value, even if it's shorter.
-* Automatically pads with spaces or truncates data to the specified length.
-* Compares and sorts based on the entire fixed length, including trailing spaces.
-* Useful for codes, identifiers, and when consistent lengths or padding is needed.
+- Fixed-length character data type.
+- Reserves a fixed amount of storage for each value, even if it's shorter.
+- Automatically pads with spaces or truncates data to the specified length.
+- Compares and sorts based on the entire fixed length, including trailing spaces.
+- Useful for codes, identifiers, and when consistent lengths or padding is needed.
